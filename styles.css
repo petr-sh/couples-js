@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+}
+
+.container {
+  max-width: 1770px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 70px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 290px;
+  font-size: 20px;
+}
+
+.input {
+  margin: 10px 0 40px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px 8px;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+@media screen and (any-hover: hover) {
+  .button:hover {
+    background-color: lightgray;
+  }
+}
+
+.button:active {
+  background-color: gray;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  max-width: 610px;
+  width: 100%;
+  background-color: gray;
+  border: 5px solid #333;
+  border-radius: 5px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  background-color: royalblue;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: color .2s, background-color .2s, transform .2s;
+}
+
+@media screen and (any-hover: hover) {
+  .card:hover {
+    background-color: dodgerblue;
+  }
+}
+
+.card.open {
+  color: black;
+  background-color: gainsboro;
+  transform: scale(.98);
+}
+
+.card.card-timer-over {
+  color: navy;
+  background-color: royalblue;
+  transform: scale(.98);
+}
+
+.card.match {
+  color: seagreen;
+  background-color: mediumseagreen;
+  transform: scale(.94);
+}
+
+.timer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  min-width: 290px;
+}
+
+.timer-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  padding: 4px 10px;
+  font-size: 28px;
+  background-color: white;
+  border: 4px solid #333;
+  border-radius: 25px;
+}
+
+.restart-btn {
+  margin-bottom: 20px;
+}
